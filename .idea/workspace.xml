@@ -5,10 +5,7 @@
     <option name="CUSTOM_SCOPE_NAME" value="Current File" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ec655ab-3478-43f9-bf16-b03c3ba418a2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/config.xml" afterPath="$PROJECT_DIR$/www/config.xml" />
-    </list>
+    <list default="true" id="3ec655ab-3478-43f9-bf16-b03c3ba418a2" name="Default" comment="" />
     <ignored path="MobileProj.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -310,12 +307,12 @@
       <option name="presentableId" value="Default" />
       <updated>1472083354725</updated>
       <workItem from="1472083356262" duration="159000" />
-      <workItem from="1472083534570" duration="6289000" />
+      <workItem from="1472083534570" duration="6595000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6448000" />
+    <option name="totallyTimeSpent" value="6754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="100" y="23" width="1180" height="724" extended-state="0" />
