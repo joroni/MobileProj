@@ -3,6 +3,8 @@
     <!-- Material Design Lite -->
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 	<link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.pink-purple.min.css" />
+    <link rel="stylesheet" href="css/material-modal.css">
+    <link rel="stylesheet" href="css/demo.min.css">
 
     <!--<script src="js/material.min.js"></script>
     <link rel="stylesheet" href="css/material.pink-purple.min.css" />-->
@@ -13,7 +15,7 @@
     <meta content="width=device-width,initial-scale=1" name=viewport>
 
 
-    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
     <!--  <script src="js/jquery-3.1.0.min.js" ></script>-->
       <script src="js/jquery.touchSwipe.min.js" ></script>
       <script src="js/user.js" ></script>
@@ -59,9 +61,10 @@
         <!-- Tabs -->
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
             <a href="#fixed-tab-home" class="mdl-layout__tab is-active">Home</a>
+
+          <a href="#fixed-tab-profile" class="mdl-layout__tab ">Profile</a>
             <a href="#fixed-tab-board" class="mdl-layout__tab ">Leader Board</a>
-            <a href="#fixed-tab-profile" class="mdl-layout__tab ">Profile</a>
-            <a href="#fixed-tab-about" class="mdl-layout__tab">About</a>
+          <!--  <a href="#fixed-tab-about" class="mdl-layout__tab">Incentives</a>-->
         </div>
 
     </header>
@@ -73,20 +76,25 @@
 
         <div class="demo-card-wide mdl-card mdl-shadow--2dp">
             <div class="mdl-card__title">
-                <h4 class="mdl-card__title-text">Hi, &nbsp; <span id="user_firstname"></span></h4>
+
+                <span class="mdl-card__title-text">
+                    <p class="mdl-card__title-greeting">Hi, &nbsp;</p>
+
+                    <p id="user_firstname" class="truncate"></p>
+                </span>
             </div>
-            <div class="mdl-card__supporting-text">
+           <!-- <div class="mdl-card__supporting-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Mauris sagittis pellentesque lacus eleifend lacinia...
-            </div>
+            </div>-->
             <div class="mdl-card__actions mdl-card--border">
-                <a href='#' class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                    Link #1
+                <a href='#' class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-layout__tab">
+                    Leader Board
                 </a>
             </div>
             <div class="mdl-card__actions mdl-card--border">
                 <a href='#' class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                    Link #2
+                   Other Incentives
                 </a>
             </div>
             <div class="mdl-card__menu">
@@ -95,8 +103,7 @@
 
 
                 </button>
-                <button id="user_menu"
-                        class="mdl-button mdl-js-button mdl-button--icon">
+              <!--  <button id="user_menu" class="mdl-button mdl-js-button mdl-button--icon" >
                     <i class="material-icons">mode_edit</i>
                 </button>
 
@@ -106,7 +113,7 @@
                     <li class="mdl-menu__item">Another Action</li>
                     <li disabled class="mdl-menu__item">Disabled Action</li>
                     <li class="mdl-menu__item">Yet Another Action</li>
-                </ul>
+                </ul> -->
             </div>
         </div>
 
@@ -120,8 +127,42 @@
 
         <section class="mdl-layout__tab-panel is-active" id="fixed-tab-home">
             <div class="page-content">
+                <h3>Welcome</h3>
+               <!-- <button  id="playMovie" onclick="playMovie();"  class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Play</button>-->
+                <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored modal__trigger" onclick="playAuto();" data-modal="#modal">
+                   Play
+                </a>
+                <div id="modal" class="modal modal__bg">
+                    <div class="modal__dialog">
+                        <div class="modal__content">
+                            <!--<div class="modal__header">
+                                <div class="modal__title">
+                                    <h2 class="modal__title-text">Message</h2>
+                                </div>
 
-                <h1>Home</h1>
+                              <span class="mdl-button mdl-button--icon mdl-js-button  material-icons  modal__close"></span>
+                            </div>
+
+
+                            <div class="modal__text">-->
+                            <div id="mod_video">  <video width="100%" height="auto" controls> <source src="http://104.238.96.209/~project/db/app/views/audio/sample.mp4" type="video/mp4" ></video>
+                            </div>                               <!-- <a href="http://markrabey.com" target="_blank">Open Link</a>-->
+                            <!--  </div>
+
+                        <!-- <div class="modal__footer">
+                               <a class="mdl-button mdl-button--colored mdl-js-button  modal__close">
+                                   Close
+                               </a>
+                           </div>-->
+                        </div>
+                    </div>
+                </div>
+
+
+               <!-- <div id="mod_video"></div>
+                <div id="mod_audio"></div>
+                <div id="mod_text"></div>-->
+
 
             </div>
         </section>
@@ -240,5 +281,8 @@
     -->
 
 </div>
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+  <script src="js/material-modal.min.js"></script>
+  </body>
 </body>
 </html>
