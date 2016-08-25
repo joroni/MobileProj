@@ -61,6 +61,7 @@ $.post( "http://104.238.96.209/~project/db/register/user", { username: username,
 					localStorage.setItem("lname", lname);
 					localStorage.setItem("userlogin", username);
 					window.location.href = "main.html";
+
 		}else {      
 			alert(data);
 			$('#reg_username').val('');
@@ -118,6 +119,18 @@ $.post( "http://104.238.96.209/~project/db/loginuser", { username: user_name_inp
 			window.location.href = "main.html";
 		}
   });
+
+	$.post( "http://104.238.96.209/~project/db/media", { is_live: 1 })
+		.done(function( data ) {
+			if(data == 0){
+				//$('#login_username_error').show();
+				$('#fixed-tab-home').html('error');
+			}else if(data == 1){
+				//localStorage.setItem("userlogin", user_name_input);
+				//window.location.href = "main.html";
+                $('#fixed-tab-home').html();
+			}
+		});
 
 }
 

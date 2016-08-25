@@ -14,9 +14,80 @@ $("#swipe_menu").swipe( {
 });
 });
 
- 
- 
- 
+
+function playMovie() {
+    /*$("video").on('click', function(){
+
+
+    });*/
+
+}
+
+
+
+
+function fillmod() {
+    //document.getElementById("mod_video").innerHTML = "";
+
+    $.ajax({
+        url:'http://104.238.96.209/~project/db/media/1',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
+        timeout: 5000,
+        success: function(data, status){
+
+            $.each(data, function(i, item) {
+
+                var video_db = item.video;
+                var audio_db = item.audio;
+                var text_db = item.text;
+                var textF_db = item.textF;
+                var image_db = item.image;
+
+                alert('Hi');
+
+              /*  if (empty(video_db)) {
+                } else {
+                    document.getElementById("mod_video").innerHTML = '<video width="290" height="200" controls> <source src="http://104.238.96.209/~project/db/app/views/audio/' + video_db + '" type="video/mp4"></video>';
+                }
+
+                if (empty(audio_db)) {
+                } else {
+                    document.getElementById("mod_audio").innerHTML = '<audio controls> <source src="http://104.238.96.209/~project/db/app/views/audio/' + audio_db + '" type="audio/mpeg"></video>';
+                }
+
+                if (empty(image_db)) {
+
+                } else {
+                    document.getElementById("mod_img").innerHTML ="<img src='http://104.238.96.209/~project/db/app/views/audio/" +item.image + "'>";
+
+                }
+
+                if (empty(text_db)) {
+
+                } else {
+
+                    if (sessionStorage.getItem("lang")=='f' && !(empty(textF_db))) {
+                        document.getElementById("mod_text").innerHTML ="<br><br><center>" +textF_db +"</center><br><br>";
+                    }  else {
+                        document.getElementById("mod_text").innerHTML ="<br><br><center>" +text_db +"</center><br><br>";
+                    }
+
+                }*/
+            });
+        },
+        error: function() {
+            alert("Error Loading Message Of Day");
+            window.location.replace("#menupage");
+        }
+    });
+}
+
+
+
+
+
+
 
 function noNet(path, success, error)
 {
@@ -48,4 +119,10 @@ noNet('http://104.238.96.209/~project/db/json.php',
 		 } 
 );
 
-  
+
+
+
+
+
+
+
