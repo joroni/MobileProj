@@ -50,10 +50,12 @@ body {
 .demo-card-wide a{
 	display:block;
 }
-#right_btn{
-	position:absolute;
-	right:15px;
+#right_btn {
+    position: absolute;
+    top: 20px;
+    right: 15px;
 }
+
 div#swipe_menu {
     display: block;
     width: 90%;
