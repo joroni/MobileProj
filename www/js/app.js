@@ -115,7 +115,7 @@ $.post( "http://104.238.96.209/~project/db/loginuser", { username: user_name_inp
 	 		$('#login_password_error').show(); 				
 		}else if(data == 1){   
 			localStorage.setItem("userlogin", user_name_input);
-			window.location.href = "user.html";
+			window.location.href = "main.html";
 		}
   });
 
