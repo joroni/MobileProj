@@ -3,7 +3,18 @@ body {
 	font-family: 'Roboto';
 }
 
+    .mdl-layout__header-row {
+        height: 50px !important;
+        padding: 0 16px 0 72px;
+    }
 
+
+#top_title {
+    background-image: url(../img/logo.png);
+    height: 50px;
+    background-position: center center;
+    background-size: cover;
+}
     .mdl-layout__header {
         min-height: 56px;
         padding-top: 20px !important;
@@ -40,11 +51,22 @@ body {
 .demo-card-wide.mdl-card {
   width: 100%;
 }
+
+
 .demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url(../img/logo2x.png) center / cover rgb(233,30,99) no-repeat;
+    background-position-y: 4px;
+    background-size: 130px 130px;
+}
+
+/*.demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 176px;
   background: url('office.jpg') center / cover;
-}
+}*/
+
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
 }

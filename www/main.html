@@ -37,11 +37,11 @@
 
             <div id='swipe_menu'>
 
-                <span class="mdl-layout-title" id='top_title'>Fizz Quiz</span>
+               <!-- <span class="mdl-layout-title" id='top_title'>Fizz Quiz</span>-->
             </div>
 
 
-            <button   id="right_btn"
+           <!-- <button   id="right_btn"
                       class="mdl-button mdl-js-button mdl-button--icon ">
                 <i class="material-icons">more_vert</i>
             </button>
@@ -52,16 +52,16 @@
                 <li class="mdl-menu__item">Another Action</li>
                 <li disabled class="mdl-menu__item">Disabled Action</li>
                 <li class="mdl-menu__item">Yet Another Action</li>
-            </ul>
+            </ul>-->
 
         </div>
 
         <!-- Tabs -->
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-            <a href="#fixed-tab-3" class="mdl-layout__tab is-active">Home</a>
-            <a href="#fixed-tab-4" class="mdl-layout__tab ">Leader Board</a>
-            <a href="#fixed-tab-1" class="mdl-layout__tab ">Profile</a>
-            <a href="#fixed-tab-2" class="mdl-layout__tab">Account</a>
+            <a href="#fixed-tab-home" class="mdl-layout__tab is-active">Home</a>
+            <a href="#fixed-tab-board" class="mdl-layout__tab ">Leader Board</a>
+            <a href="#fixed-tab-profile" class="mdl-layout__tab ">Profile</a>
+            <a href="#fixed-tab-about" class="mdl-layout__tab">About</a>
         </div>
 
     </header>
@@ -73,7 +73,7 @@
 
         <div class="demo-card-wide mdl-card mdl-shadow--2dp">
             <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">Welcome</h2>
+                <h4 class="mdl-card__title-text">Hi, &nbsp; <span id="user_firstname"></span></h4>
             </div>
             <div class="mdl-card__supporting-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -118,7 +118,7 @@
 
     <main class="mdl-layout__content">
 
-        <section class="mdl-layout__tab-panel is-active" id="fixed-tab-3">
+        <section class="mdl-layout__tab-panel is-active" id="fixed-tab-home">
             <div class="page-content">
 
                 <h1>Home</h1>
@@ -126,7 +126,7 @@
             </div>
         </section>
 
-        <section class="mdl-layout__tab-panel " id="fixed-tab-1">
+        <section class="mdl-layout__tab-panel " id="fixed-tab-profile">
             <div class="page-content">
 
 
@@ -150,7 +150,7 @@
 
             </div>
         </section>
-        <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+        <section class="mdl-layout__tab-panel" id="fixed-tab-about">
             <div class="page-content">
 
                 <!-- Icon List -->
@@ -187,7 +187,7 @@
                 </ul>
             </div>
         </section>
-        <section class="mdl-layout__tab-panel " id="fixed-tab-3">
+        <section class="mdl-layout__tab-panel " id="fixed-tab-home">
             <div class="page-content">
 
 
@@ -211,33 +211,21 @@
 
             </div>
         </section>
-        <section class="mdl-layout__tab-panel " id="fixed-tab-4">
-            <div class="page-content">
-
-
-                <table class='table table-bordered'>
-                    <div id='output'></div>
-                </table>
-
-                <input type='hidden' id='user_username'><Br>
-                Firstname:<span id='user_firstname'></span><Br>
-                <div style='clear:both;'></div>
-
-                <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="text" id="fname">
-                </div>
-                <button type='button' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect " onclick='update_user();'>
-                    Update
-                </button>
-                <div id='update_1' style='display:none;'>user updated</div>
-                <div id='update_0' style='display:none;'>Error</div>
-
-
-            </div>
-        </section>
-
     </main>
 
+
+        <section class="mdl-layout__tab-panel " id="fixed-tab-board">
+            <div class="page-content">
+
+
+
+
+
+            </div>
+        </section>
+
+
+<!--
     <footer class="mdl-mega-footer">
         <div class="mdl-mega-footer__middle-section">
             <div class="mdl-mini-footer__left-section">
@@ -249,6 +237,7 @@
             </div>
         </div>
     </footer>
+    -->
 
 </div>
 </body>

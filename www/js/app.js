@@ -14,8 +14,8 @@ document.getElementById("result").innerHTML = localStorage.getItem("lastname");
 function check_storage(){
 
 	if (localStorage['userlogin']) {
-		    window.location.replace("user.html");
-		    console.log('goto user.html');
+		    window.location.replace("main.html");
+		    console.log('goto main.html');
 	}else{
 			console.log('err');
 		}
@@ -60,7 +60,7 @@ $.post( "http://104.238.96.209/~project/db/register/user", { username: username,
 					localStorage.setItem("fname", fname);
 					localStorage.setItem("lname", lname);
 					localStorage.setItem("userlogin", username);
-					window.location.href = "user.html";
+					window.location.href = "main.html";
 		}else {      
 			alert(data);
 			$('#reg_username').val('');
@@ -81,7 +81,7 @@ function login(){
 		var user_pass_input = $('#user_pass_input').val();
 /*
 	if (localStorage['userlogin']) {
-		    window.location.replace("user.html");
+		    window.location.repla ce("user.html");
 		    console.log('goto user.html');
 	}else{
 
